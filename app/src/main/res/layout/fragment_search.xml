@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.weatherapp.search.SearchViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.weatherapp.search.SearchFragment">
+    >
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="278dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="120dp"
+        android:ems="10"
+        android:hint="@string/city"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text=""
+        android:drawableEnd="@drawable/ic_baseline_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCity" />
+
+    <Button
+        android:id="@+id/searchHistoryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Search History"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@{viewModel.text}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchHistoryButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
