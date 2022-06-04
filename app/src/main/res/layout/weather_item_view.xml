@@ -50,22 +50,30 @@
             app:dataMaxTemp="@{weatherListItem.main.maxTemp}"
             tools:text="max temp"
             />
-        <TextView
-            android:id="@+id/weather"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="@{weatherListItem.weather[0].main}"
-            tools:text="weather"
-            />
-        <TextView
-            android:id="@+id/weatherDescr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="@{weatherListItem.weather[0].description}"
-            tools:text="weather description"
-            />
+            android:orientation="horizontal"
+            android:background="#e3e3e3"
+            >
+            <TextView
+                android:id="@+id/weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@{weatherListItem.weather[0].main}"
+                tools:text="weather"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:id="@+id/weatherDescr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@{weatherListItem.weather[0].description}"
+                tools:text="weather description"
+                />
+        </LinearLayout>
     </LinearLayout>
 
 
