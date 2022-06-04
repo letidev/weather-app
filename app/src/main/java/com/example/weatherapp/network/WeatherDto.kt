@@ -1,6 +1,7 @@
 package com.example.weatherapp.network
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 import java.math.BigDecimal
 
 data class MainWeather(
