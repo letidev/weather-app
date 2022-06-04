@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import com.example.weatherapp.DBHelper
 import com.example.weatherapp.WeatherDetailsActivity
 import com.example.weatherapp.databinding.FragmentSearchBinding
 
@@ -33,7 +34,13 @@ class SearchFragment : Fragment() {
 
         searchButton.setOnClickListener {
             val intent = Intent(activity, WeatherDetailsActivity::class.java);
-            intent.putExtra("City", searchEditText.text.toString())
+            val city = searchEditText.text.toString()
+
+
+            val db = DBHelper(activity?.applicationContext, null);
+            db.addSearch(city);
+
+            intent.putExtra("City", city)
             requireActivity().startActivity(intent);
         }
 
