@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Binding to WeatherListItem  -->
+    <data>
+        <variable
+            name="weatherListItem"
+            type="com.example.weatherapp.network.WeatherListItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#e3e3e3"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{weatherListItem.dtFormatted}"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            tools:text="date"
+            />
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dataTemp="@{weatherListItem.main.temp}"
+            android:textColor="@color/black"
+            tools:text="temperature"/>
+        <TextView
+            android:id="@+id/minTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:dataMinTemp="@{weatherListItem.main.minTemp}"
+            tools:text="min temp"/>
+        <TextView
+            android:id="@+id/maxTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:dataMaxTemp="@{weatherListItem.main.maxTemp}"
+            tools:text="max temp"
+            />
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@{weatherListItem.weather[0].main}"
+            tools:text="weather"
+            />
+        <TextView
+            android:id="@+id/weatherDescr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@{weatherListItem.weather[0].description}"
+            tools:text="weather description"
+            />
+    </LinearLayout>
+
+
+</layout>

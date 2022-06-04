@@ -24,6 +24,8 @@ class WeatherDetailFragment : Fragment() {
         val city = activity?.intent!!.getStringExtra("City").toString()
         viewModel.getCurrentWeather(city);
 
+        binding.weatherList.adapter = WeatherListAdapter()
+
         return binding.root;
     }
 }

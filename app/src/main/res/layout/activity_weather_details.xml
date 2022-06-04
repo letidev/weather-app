@@ -6,4 +6,5 @@
     android:name="com.example.weatherapp.weatherdetail.WeatherDetailFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout="@layout/fragment_weather_detail" />
+    tools:layout="@layout/fragment_weather_detail"
+    />

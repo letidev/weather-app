@@ -31,7 +31,13 @@ data class WeatherListItem (
     val weather: List<WeatherConditionName>
         )
 
+data class WeatherCity(
+    val name: String,
+    val country: String
+)
+
 data class WeatherDto (
     val cod: String,
-    val list: List<WeatherListItem>
+    val list: List<WeatherListItem>,
+    val city: WeatherCity
 )
