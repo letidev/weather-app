@@ -4,13 +4,13 @@ import com.squareup.moshi.Json
 import java.math.BigDecimal
 
 data class MainWeather(
-    val temp: BigDecimal,
+    val temp: Double,
 
     @Json(name = "temp_min")
-    val minTemp: BigDecimal,
+    val minTemp: Double,
 
     @Json(name = "temp_max")
-    val maxTemp: BigDecimal
+    val maxTemp: Double
 )
 
 data class WeatherConditionName (

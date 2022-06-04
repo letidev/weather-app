@@ -34,7 +34,7 @@ class SearchViewModel : ViewModel() {
                     throw Exception(e)
                 }
             } catch (e: Exception) {
-                _text.value = "Something went wrong"
+                _text.value = e.message
             }
         }
     }
