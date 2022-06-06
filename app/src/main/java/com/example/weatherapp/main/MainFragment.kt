@@ -1,4 +1,4 @@
-package com.example.weatherapp.search
+package com.example.weatherapp.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,11 +9,12 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import com.example.weatherapp.DBHelper
+import com.example.weatherapp.SearchHistory
 import com.example.weatherapp.WeatherDetailsActivity
 import com.example.weatherapp.databinding.FragmentSearchBinding
 
 
-class SearchFragment : Fragment() {
+class MainFragment : Fragment() {
 
     private lateinit var searchButton: Button
     private lateinit var historyButton: Button
@@ -37,11 +38,16 @@ class SearchFragment : Fragment() {
             val city = searchEditText.text.toString()
 
 
-            val db = DBHelper(activity?.applicationContext, null);
+            val db = DBHelper(activity?.applicationContext);
             db.addSearch(city);
 
             intent.putExtra("City", city)
             requireActivity().startActivity(intent);
+        }
+
+        historyButton.setOnClickListener {
+            val intent = Intent(activity, SearchHistory::class.java)
+            requireActivity().startActivity(intent)
         }
 
         return binding.root;

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Binding to SearchItem  -->
+    <data>
+        <variable
+            name="searchItem"
+            type="com.example.weatherapp.history.SearchItem" />
+        <variable
+            name="viewModel"
+            type="com.example.weatherapp.history.SearchHistoryViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        >
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{searchItem.city}"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            tools:text="City" />
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:textSize="11sp"
+            android:minHeight="20dp"
+            app:listItemId="@{searchItem.id}"
+            app:itemModel="@{viewModel}"
+             />
+    </LinearLayout>
+</layout>

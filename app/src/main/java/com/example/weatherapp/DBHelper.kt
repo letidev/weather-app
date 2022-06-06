@@ -6,7 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class DBHelper(context: Context?, factory: SQLiteDatabase.CursorFactory?) : SQLiteOpenHelper(context, DATABASE_NAME, factory, DATABASE_VERSION)
+class DBHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
 {
     override fun onCreate(db: SQLiteDatabase) {
         val query = ("CREATE TABLE $TABLE_NAME ($ID_COL INTEGER PRIMARY KEY, $CITY_COL TEXT)")
@@ -27,9 +27,16 @@ class DBHelper(context: Context?, factory: SQLiteDatabase.CursorFactory?) : SQLi
         db.close()
     }
 
-    fun getSearches(): Cursor? {
+    fun getSearches(): Cursor {
         val db = this.readableDatabase
         return db.rawQuery("SELECT * FROM $TABLE_NAME", null);
+    }
+
+    fun deleteSearch(id: Int?) {
+        if(id !== null) {
+            val db = this.writableDatabase;
+            db.delete(TABLE_NAME, "$ID_COL = $id", null);
+        }
     }
 
     companion object{

@@ -16,8 +16,8 @@ class WeatherListAdapter : ListAdapter<WeatherListItem, WeatherListAdapter.Weath
             LayoutInflater.from(parent.context)))
     }
 
-    // here we call getItem to get the MarsPhoto object associated with the current RecyclerView position
-    // and then pass that property to the bind method in the MarsPhotoViewHolder
+    // here we call getItem to get the WeatherItem object associated with the current RecyclerView position
+    // and then pass that property to the bind method in the WeatherListItemViewHolder
     override fun onBindViewHolder(holder: WeatherListItemViewHolder, position: Int) {
         val weatherListItem = getItem(position)
         holder.bind(weatherListItem)
