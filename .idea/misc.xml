@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/drawable/ic_broken_image.xml" value="0.2275" />
+        <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/drawable/loading_animation.xml" value="0.2275" />
+        <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/drawable/loading_image.xml" value="0.2275" />
         <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
         <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/layout/activity_search_history.xml" value="0.2695035460992908" />
         <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/layout/activity_weather_details.xml" value="0.33061594202898553" />
@@ -10,7 +13,7 @@
         <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/layout/fragment_search_history.xml" value="0.5" />
         <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/layout/fragment_weather_detail.xml" value="0.33" />
         <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/layout/search_history_item.xml" value="0.1" />
-        <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/layout/weather_item_view.xml" value="0.33" />
+        <entry key="..\:/leti/Dev/java/weather-app/app/src/main/res/layout/weather_item_view.xml" value="0.67" />
       </map>
     </option>
   </component>
