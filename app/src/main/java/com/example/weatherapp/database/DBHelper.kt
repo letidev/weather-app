@@ -1,4 +1,4 @@
-package com.example.weatherapp.datautils
+package com.example.weatherapp.database
 
 import android.content.ContentValues
 import android.content.Context

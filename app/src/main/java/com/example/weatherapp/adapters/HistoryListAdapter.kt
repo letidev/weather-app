@@ -1,4 +1,4 @@
-package com.example.weatherapp.history
+package com.example.weatherapp.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weatherapp.databinding.SearchHistoryItemBinding
+import com.example.weatherapp.history.SearchItem
 
-class HistoryListAdapter : ListAdapter<SearchItem, HistoryListAdapter.SearchItemViewHolder>(DiffCallback) {
+class HistoryListAdapter : ListAdapter<SearchItem, HistoryListAdapter.SearchItemViewHolder>(
+    DiffCallback
+) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : SearchItemViewHolder {
         return SearchItemViewHolder((SearchHistoryItemBinding.inflate(LayoutInflater.from(parent.context))))

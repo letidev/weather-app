@@ -5,7 +5,7 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.weatherapp.datautils.DBHelper
+import com.example.weatherapp.database.DBHelper
 
 class SearchHistoryViewModel : ViewModel() {
     private val _searches = MutableLiveData<List<SearchItem>>()

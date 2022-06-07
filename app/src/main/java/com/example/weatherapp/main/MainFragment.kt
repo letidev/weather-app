@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-import com.example.weatherapp.datautils.DBHelper
+import com.example.weatherapp.database.DBHelper
 import com.example.weatherapp.SearchHistoryActivity
 import com.example.weatherapp.WeatherDetailsActivity
 import com.example.weatherapp.databinding.FragmentSearchBinding

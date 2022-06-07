@@ -1,4 +1,4 @@
-package com.example.weatherapp.weatherdetail
+package com.example.weatherapp.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weatherapp.databinding.WeatherItemViewBinding
 
-class WeatherListAdapter : ListAdapter<WeatherListItem, WeatherListAdapter.WeatherListItemViewHolder>(DiffCallback) {
+class WeatherListAdapter : ListAdapter<WeatherListItem, WeatherListAdapter.WeatherListItemViewHolder>(
+    DiffCallback
+) {
 
     // the method needs to return a new WeatherListItemViewHolder, created by inflating the WeatherItemViewBinding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherListItemViewHolder {
