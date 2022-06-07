@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-import com.example.weatherapp.DBHelper
-import com.example.weatherapp.SearchHistory
+import com.example.weatherapp.datautils.DBHelper
+import com.example.weatherapp.SearchHistoryActivity
 import com.example.weatherapp.WeatherDetailsActivity
 import com.example.weatherapp.databinding.FragmentSearchBinding
 
@@ -46,7 +46,7 @@ class MainFragment : Fragment() {
         }
 
         historyButton.setOnClickListener {
-            val intent = Intent(activity, SearchHistory::class.java)
+            val intent = Intent(activity, SearchHistoryActivity::class.java)
             requireActivity().startActivity(intent)
         }
 

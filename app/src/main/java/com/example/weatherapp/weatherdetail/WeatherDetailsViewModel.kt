@@ -4,9 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.weatherapp.DBHelper
 import com.example.weatherapp.network.WeatherApi
-import com.example.weatherapp.network.WeatherCity
 import com.example.weatherapp.network.WeatherListItem
 import kotlinx.coroutines.launch
 import retrofit2.HttpException

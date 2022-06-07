@@ -8,6 +8,7 @@ import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.example.weatherapp.datautils.DBHelper
 import com.example.weatherapp.history.HistoryListAdapter
 import com.example.weatherapp.history.SearchHistoryViewModel
 import com.example.weatherapp.history.SearchItem

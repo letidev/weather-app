@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeatherApp">
         <activity
-            android:name=".SearchHistory"
+            android:name=".SearchHistoryActivity"
             android:exported="false" />
         <activity
             android:name=".WeatherDetailsActivity"
